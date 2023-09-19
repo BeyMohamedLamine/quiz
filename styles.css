@@ -1,0 +1,203 @@
+html, body{
+    margin: 0%;
+    padding: 0%;
+    overflow: hidden;
+}
+body{
+    background-color: rgb(200, 200, 200);
+    display: flex;
+    justify-content: center;
+}
+main{
+    width: 100%;
+    max-width: 420px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-top: 5%;
+    background-color: rgb(190, 199, 196);
+}
+#imgDiv{
+    width: 80%;
+    max-height: 336px;
+    aspect-ratio: 1/1;
+}
+#theImage {
+    width: 100%;
+    height: 100%;
+    max-height: 336px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+#hintBox{
+    width: 80%;
+    height: 10vw;
+    margin-top: 5%;
+    margin-bottom: 2%;
+}
+#theAnswerBox{
+    width: 99%;
+    height: 10%;
+}
+#theCharsDiv{
+    width: 90%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+.charSpace {
+    background-color: aliceblue;
+    aspect-ratio: 1/1;
+    width: 40px;
+    min-width: 30px;
+    height: 40px;
+    min-height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.58rem;
+    border-radius: 20%;
+}
+#theAnswerBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 3px;
+}
+.answerSquares {
+    background-color: white;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    border-radius: 20%;
+}
+#hint{
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.overlay{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.356);
+    transition: 200ms ease-in-out;
+    transform: scale(0);
+    pointer-events: none;
+    opacity: 0;
+    margin-top: -5%;
+}
+.overlay.active {
+    transform: scale(1);
+    opacity: 1;
+    pointer-events: all;
+}
+
+.popUp {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 1px solid black;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.popUp.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+#notification {
+    font-size: 3em;
+}
+#notificationButton {
+    border-radius: 15px;
+    border: 1px solid black;
+    width : 20vw;
+    height: 35px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.btn {
+    width: 30%;
+    height: 100%;
+    font-size: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.301);
+    border: 2px solid aliceblue;
+    color: aliceblue;
+    border-radius: 25px;
+    cursor: pointer;
+}
+#btnFooter{
+    margin-top: 20px;
+    width: 100%;
+    height: 5%;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+@media only screen and (max-width: 400px) {
+    #hintBox{
+        margin: 0 0;
+        margin-bottom: 30px;
+    }
+    #imgDiv{
+        max-height: 40%;
+        aspect-ratio: 1/1;
+        width: 70%;
+    }
+    #btnFooter{
+        position: fixed;
+        bottom: 10vw;
+        align-self:flex-end;
+    }
+    .charSpace {
+        width: 35px;
+        height: 35px;
+    }
+    #theCharsDiv{
+        margin: 20px 0;
+    }
+    #theAnswerBox{
+        margin-top: 30px;
+    }
+}
+@media only screen and (max-width: 300px) {
+    .charSpace {
+        width: 10px;
+        height: 10px;
+        font-size: 1.2rem;
+    }
+    #theAnswerBox{
+        margin-top: 5px;
+    }
+    #hintBox{
+        margin-top: -15px;
+        margin-bottom: 30px;
+    }
+    #theCharsDiv{
+        margin: 5px 0;
+    }
+    .btn{
+        height: 35px;
+    }
+    .popUp{
+        width: 70%;
+        text-align: center;
+    }
+}

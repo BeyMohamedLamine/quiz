@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A gamers journey | the game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <div id="hintBox">
+            <h1 id="hint"></h1>
+        </div>
+        <div id="imgDiv">
+            <img id="theImage" src="theArchitectorRules.PNG" alt="the-image">
+        </div>
+        
+        <div id="theAnswerBox"> 
+        </div>
+        <div id="theCharsDiv">
+            <div class="charSpace" onclick="transferValue(this)" id="n1"></div>
+            <div class="charSpace" onclick="transferValue(this)" id="n2"></div>
+            <div class="charSpace" onclick="transferValue(this)" id="n3"></div>
+            <div class="charSpace" onclick="transferValue(this)" id="n4"></div>
+            <div class="charSpace" onclick="transferValue(this)" id="n5"></div>
+            <div class="charSpace" onclick="transferValue(this)" id="n6"></div>
+            <div class="charSpace" onclick="transferValue(this)" id="n7"></div>
+            <div class="charSpace" onclick="transferValue(this)" id="n8"></div>
+            <div class="charSpace" onclick="transferValue(this)" id="n9"></div>
+            <div class="charSpace" onclick="transferValue(this)" id="n10"></div>
+            <div class="charSpace" onclick="transferValue(this)" id="n11"></div>
+            <div class="charSpace" onclick="transferValue(this)" id="n12"></div>
+            <div class="charSpace" onclick="transferValue(this)" id="n13"></div>
+            <div class="charSpace" onclick="transferValue(this)" id="n14"></div>
+            <div class="charSpace" onclick="transferValue(this)" id="n15"></div>
+            <div class="charSpace" onclick="transferValue(this)" id="n16"></div>
+        </div>
+        <div id="btnFooter">
+            <button class="btn" id="checkButton" onclick="checkingTheAnswer()">تحقق</button>
+            <button class="btn" id="resetButton" onclick="resetResults()">اعادة</button>
+        </div> 
+
+        <div class="popUp" id="popUp">
+            <div id="notification">اجابة صحيحة</div>
+            <hr>
+            <button id="notificationButton" onclick="nextQuestion()">التالي</button>
+        </div>
+        <div class="overlay" id="overlay"></div>
+    </main>
+    <script src="code.js"></script>
+</body>
+</html>
